@@ -1,7 +1,8 @@
 pipeline {
     agent any
     tools{
-        maven 'maven_3_5_0'
+        //maven 'maven_3_5_0'
+        maven 'Maven 3.9.4'
     }
     stages{
         stage('Build Maven'){
@@ -13,7 +14,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t javatechie/devops-integration .'
+                    sh 'docker build -t sabkeebar/devops-integration .'
                 }
             }
         }
